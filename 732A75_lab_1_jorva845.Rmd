@@ -1,0 +1,75 @@
+---
+title: "Lab 1 - 732A75 - Clustering Algorithms"
+author: "Joris van Doorn - jorva845 | Bayu Brahmantio - baybr878 | Ismail Khalil - ismkh208"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(fig.width=9, fig.height = 4.1)
+knitr::opts_chunk$set(tidy.opts=list(width.cutoff=5),tidy=TRUE)
+library(tidyr)
+library(dplyr)
+library(knitr)
+set.seed(12345)
+```
+
+# 1. SimpleKmeans
+
+*Apply "SimpleKMeans" to your data. In Weka euclidian distance is implemented in SimpleKmeans. You can set the number of clusters and seed of a random algorithm for generating initial cluster centers. Experiment with the algorithm as follows:*
+
+## 1. 
+*Choose a set of attributes for clustering and give a motivation. (Hint: always ignore attribute "name". Why does the name attribute need to be ignored?)*
+
+![Results Simple K Means, k = 2, seed = 1](k2_s1.png){width=300px}
+
+The attributes for the simpleKmeans clustering algorithm we choose are 2 clusters, with seed = 1. Two clusters is the minimum that we can choose, and it is a good start to see what happens if we simply want to divide the data into two groups. For the seed we started with 1, just so we can easily compare to other seeds. The output is depicted in the image.
+
+The name attribute needs to be ignored because it is a string with labels, which is exactly what we want to predict.
+
+## 2.
+*Experiment with at least two different numbers of clusters, e.g. 2 and 5, but with the same seed value 10.*
+
+![Results Simple K Means, k = 2, seed = 10](k2_s10.png){width=300px}
+
+![Results Simple K Means, k = 5, seed = 10](k5_s10.png){width=300px}
+
+## 3. 
+*Then try with a different seed value, i.e. different initial cluster centers. Compare the results with the previous results. Explain what the seed value controls.*
+
+![Results Simple K Means, k = 2, seed = 11](k2_s11.png){width=300px}
+
+![Results Simple K Means, k = 5, seed = 11](k5_s11.png){width=300px}
+
+
+## 4.
+
+*Do you think the clusters are "good" clusters? (Are all of its members "similar" to each other? Are members from different clusters dissimilar?)*
+
+## 5. 
+
+*What does each cluster represent? Choose one of the results. Make up labels (words or phrases in English) which characterize each cluster.*
+
+\newpage
+
+# 2. MakeDensityBasedClusters
+
+*Now with MakeDensityBasedClusters, SimpleKMeans is turned into a denstiy-based clusterer. You can set the minimum standard deviation for normal density calculation. Experiment with the algorithm as the follows:*
+
+## 1. 
+
+*Use the SimpleKMeans clusterer which gave the result you haven chosen in 5).*
+
+![Results Density Based Cluster, k = 5, seed = 11, standard deviation = 1](k5_s11_den_std1.png){width=300px}
+
+![Results Density Based Cluster, k = 5, seed = 11, standard deviation = 1](k5_s11_den_std1_2.png){width=150px}
+
+## 2. 
+
+*Experiment with at least two different standard deviations. Compare the results. (Hint: Increasing the standard deviation to higher values will make the differences in different runs more obvious and thus it will be easier to conclude what the parameter does)*
+
+![Results Density Based Cluster, k = 5, seed = 11, standard deviation = 2](k5_s11_den_std2.png){width=300px}
+
+![Results Density Based Cluster, k = 5, seed = 11, standard deviation = 2](k5_s11_den_std2_2.png){width=150px}
+
