@@ -70,12 +70,22 @@ Comparing 2 clusters versus 5 clusters we find a number of differences. Since we
 
 When looking at the results of the cluster models with k = 2, we notice that some attributes are less differentiating than others. In both models with k = 2, the protein levels are very similar in both clusters, thus not providing much information. The differentiation between the clusters is made when considering Fat, Calcium and the Energy levels, because the centroids differ more.
 
+Results of k = 2, seed = 11; Energy of various foods
+
+![](k2_s11_q1_5_2.jpeg){width=450px}
+
+Results of k = 2, seed = 11; Fat of various foods
+
+![](inst_fat.PNG){width=450px}
+
+As we can see from the plot above, we can see that there are clear distinctions between two clusters (red and blue) using the attribute Energy and Fat. Both of them seem to make their own cluster. We can conclude that the clusters are relatively good.  
+
 
 ## 5. 
 
 *What does each cluster represent? Choose one of the results. Make up labels (words or phrases in English) which characterize each cluster.*
 
-As we look at the graph below, when can distinguish that the two clusters are foods with high energy levels, and low energy levels. The foods with high energy are mostly red meats, while the lower energy rich foods are either non-red meats or more heavily processed (such as canned goods). So potential cluster names could be "red meat vs non-red meat", or "Energy rich foods vs Non-energy rich foods", or "non-processed foods vs processed foods"
+As we look at the graph below, when can distinguish that the two clusters (red and blue) are foods with high energy levels, and low energy levels. The foods with high energy (red cluster) are mostly red meats, while the lower energy rich foods (blue cluster) are either non-red meats or more heavily processed (such as canned goods). So potential cluster names for cluster in red vs cluster in blue could be "red meat vs non-red meat", or "Energy rich foods vs Non-energy rich foods", or "non-processed foods vs processed foods".
 
 Results of k = 2, seed = 11; Energy of various foods
 
@@ -142,7 +152,7 @@ Results Density Based Cluster, seed = 11, standard deviation = 100
 ![](q2_100_2.jpeg){width=450px}
 </p>
 
-Although it is hard to determine exactly what the impact of the standard deviation is on the model, because we do not have access to the actual equations, we suspect that an increase in the standard deviation will correspond with more unequal clusters. In other words, from the graphs we obtained we see that one of the clusters covers more observations as the standard deviation increases
+Although it is hard to determine exactly what the impact of the standard deviation is on the model, because we do not have access to the actual equations, we suspect that an increase in the standard deviation will correspond with more unequal clusters. In other words, from the graphs we obtained we see that one of the clusters covers more observations as the standard deviation increases. So as the standard deviation increases, the number of observations clustered into non-energy rich foods (blue cluster) increases too. We can see that using 1e-6 standard deviation there are 10 observations clustered into energy rich foods (red cluster) and 17 observations clustered into non-energy rich foods (blue cluster). Using 1 standard deviation we get 9 vs 18 and using 100 standard deviation we get 7 vs 20.  
 
 
 
